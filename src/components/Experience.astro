@@ -1,0 +1,22 @@
+---
+interface Props {
+    date: string,
+    title: string,
+    description: string,
+    technologies: string[],
+}
+
+const { date, title, description, technologies } = Astro.props
+---
+
+<li class="mb-16 ms-4">
+    <div class="absolute size-3 rounded-full mt-1.5 -start-1.5 border border-neutral-900 bg-purple-600"></div>
+    <article class="text-gray-300">
+        <time class="mb-1 text-sm">{date}</time>
+        <h3 class="mb-1 text-xl font-semibold">{title}</h3>
+        <p class="mb-2">{description}</p>
+        <ul class="flex gap-2 flex-wrap">
+            { technologies.map(tech => <li class="px-3 select-none py-1 bg-purple-800 rounded-xl">{tech}</li>) }
+        </ul>
+    </article>
+</li>

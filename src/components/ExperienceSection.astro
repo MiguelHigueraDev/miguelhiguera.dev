@@ -1,0 +1,23 @@
+---
+import Separator from "./Separator.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<section class="max-w-[900px] mx-auto">
+  <Separator />
+  <h1 class="text-3xl font-bold text-gray-400 mb-2">Experiencia</h1>
+  <ol class="relative border-s-2 border-purple-600">
+    <Experience
+      date="Noviembre 2022 - Mayo 2023"
+      title="Desarrollador Laravel Full Stack - Municipalidad de Los Ángeles"
+      description="Desarrollo de una aplicación de encuestas, orientada a la población de la ciudad. Aplicación maneja tanto la creación como distribución de las encuestas, y la generación de las estadísticas. Aplicación integrada con ClaveÚnica para registro e inicio de sesión, después de geolocalización."
+      technologies={["PHP", "Laravel", "Vue", "MySQL"]}
+    />
+    <Experience
+      date="Febrero 2022 - Marzo 2022"
+      title="Práctica laboral Laravel Full Stack - Municipalidad de Los Ángeles"
+      description="Porte de sistema de manejo de proveedores antiguo (legacy) a PHP utilizando Laravel y jQuery."
+      technologies={["PHP", "Laravel", "jQuery", "MySQL"]}
+    />
+  </ol>
+</section>
