@@ -1,0 +1,44 @@
+---
+import Separator from "./Separator.astro";
+import Project from "./Project.astro";
+---
+
+<section class="max-w-[900px] mx-auto" id="projects">
+  <Separator />
+  <h2 class="text-3xl font-bold text-gray-400 mb-4">Proyectos</h2>
+  <ul class="flex flex-col md:grid md:grid-rows-2 md:grid-cols-2 gap-6">
+      <Project
+        name="Battleship JS"
+        image="/battleship.webp"
+        liveUrl="https://battleship.miguelhiguera.dev"
+        repoUrl="https://github.com/MiguelHigueraDev/battleship-js"
+        description="Juego de combate naval de un jugador en el que se puede jugar contra una IA que ataca de manera inteligente (atacando coordenadas adyacentes a sus impactos)."
+        technologies={["JavaScript", "HTML", "CSS"]}
+      />
+      <Project
+        name="MoodList"
+        image="/moodlist.webp"
+        liveUrl="https://moodlist.vercel.app"
+        repoUrl="https://github.com/MiguelHigueraDev/moodlist"
+        description="Aplicación web que utiliza la API de Spotify para mostrar recomendaciones basadas en tus gustos musicales y en diversos parámetros como su nivel de energía, positividad, etc."
+        technologies={["Svelte", "HTML", "CSS"]}
+      />
+
+      <Project
+        name="raccoonBot"
+        image="/raccoonbot.webp"
+        liveUrl="https://raccoonbot.vercel.app"
+        repoUrl="https://github.com/MiguelHigueraDev/raccoonbot-ts"
+        description="Bot de Discord multifunción y extensible que aumenta las interacciones en tu servidor, proporcionando varias utilidades como juegos, recordatorio de cumpleaños, encuestas, entre otras. Utilizado en más de 10 servidores."
+        technologies={["TypeScript", "Node.js"]}
+      />
+      <Project
+        name="IP Log Filter"
+        image="/iplog.webp"
+        liveUrl="https://iplog-filter.vercel.app"
+        repoUrl="https://github.com/MiguelHigueraDev/ip-log-filter"
+        description="Aplicación ligera que permite filtrar una lista de IPs obtenida de un log, para poder fácilmente banear utilizando la sintaxis de IPTables."
+        technologies={["React", "HTML", "CSS"]}
+      />
+  </ul>
+</section>
