@@ -19,9 +19,9 @@ const DiscordPresence = () => {
       {!loading && statusMap[status.discord_status] ? (
         <>
           <div>
-            <button data-tooltip-id="discord-id" data-tooltip-content="Discord: misfitdude" data-tooltip-place="right" className="status-button rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 max-w-[300px] mt-3 mr-3">
+            <button data-tooltip-id="discord-id" data-tooltip-content="Discord: misfitdude" data-tooltip-place="right" className="status-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 max-w-[300px] mt-3 mr-3">
               <span className={`status-dot ${status.discord_status}`}></span>
-              <span className="m-0 mr-1 p-0 text-center text-md h-5">
+              <span className="m-0 mr-1 p-0 text-center text-md select-none h-5">
                 {!loading && statusMap[status.discord_status]}
               </span>
               <Tooltip id="discord-id" />
@@ -30,9 +30,9 @@ const DiscordPresence = () => {
 
           {status.spotify && (
             <div>
-              <a target="_blank" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 mt-3">
-                <img src="spotify.svg" className={`status-dot`}></img>
-                <span className="m-0 mr-1 p-0 text-center text-md h-5">
+              <a target="_blank" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 mt-3">
+                <img src="spotify.svg" alt="" className={`status-dot`}></img>
+                <span className="m-0 mr-1 p-0 text-center text-md select-none h-5">
                   {status.spotify.artist} - {status.spotify.song}
                 </span>
               </a>
@@ -42,7 +42,7 @@ const DiscordPresence = () => {
       ) : (
         <button className="status-button rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 max-w-[300px] mt-3">
           <span className="status-dot loading"></span>
-          <span className="m-0 mr-1 p-0 text-center text-md h-5">
+          <span className="m-0 mr-1 p-0 text-center text-md select-none h-5">
             Cargando...
           </span>
         </button>
