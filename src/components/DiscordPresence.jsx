@@ -30,7 +30,7 @@ const DiscordPresence = () => {
 
           {status.spotify && (
             <div>
-              <a target="_blank" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 max-w-[300px] mt-3">
+              <a target="_blank" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 mt-3">
                 <img src="spotify.svg" className={`status-dot`}></img>
                 <span className="m-0 mr-1 p-0 text-center text-md h-5">
                   {status.spotify.artist} - {status.spotify.song}
