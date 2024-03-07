@@ -30,7 +30,7 @@ const DiscordPresence = () => {
             </button>
             {status.activities.find((ac) => ac.type === 0)&& (
               <div>
-                <button target="_blank" data-tooltip-id="game-playing" data-tooltip-content={`Jugando: ${status.activities.find((ac) => ac.type === 0).name}`} data-tooltip-place="bottom" className="spotify-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 mt-3">
+                <button target="_blank" data-tooltip-id="game-playing" data-tooltip-content={`Jugando: ${status.activities.find((ac) => ac.type === 0).name}\n${status.activities.find((ac) => ac.type === 0).details ?? ""}`} data-tooltip-place="bottom" className="spotify-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 mt-3">
                   <img src="joystick.svg" alt="" className={`status-dot`}></img>
                   <span className="m-0 mr-1 p-0 text-center text-md select-none md:h-5">
                     {status.activities.find((ac) => ac.type === 0).name.length < 25 ? status.activities.find((ac) => ac.type === 0).name : ((status.activities.find((ac) => ac.type === 0).name.slice(0, 25) + "..." ))}
