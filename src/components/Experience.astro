@@ -16,7 +16,7 @@ const { date, title, description, technologies } = Astro.props
         <h3 class="mb-1 text-xl font-semibold">{title}</h3>
         <p class="mb-2">{description}</p>
         <ul class="flex gap-2 flex-wrap">
-            { technologies.map(tech => <li class="px-3 select-none py-1 bg-neutral-800 rounded-xl">{tech}</li>) }
+            { technologies.map(tech => <li class="px-3 select-none py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-50 ease-in-out rounded-xl">{tech}</li>) }
         </ul>
     </article>
 </li>
