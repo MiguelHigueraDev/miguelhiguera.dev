@@ -38,7 +38,7 @@ const DiscordPresence = () => {
                   <Tooltip id="game-playing" style={{ backgroundColor: '#2f2f2f'}}>
                     <div className="flex gap-3">
                       <div className="items-center justify-center">
-                        {gameActivity.assets.small_image &&
+                        {gameActivity.assets &&
                           <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
                           className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
                         }
