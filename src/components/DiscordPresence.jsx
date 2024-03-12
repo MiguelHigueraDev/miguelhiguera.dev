@@ -35,11 +35,17 @@ const DiscordPresence = () => {
                   <span className="m-0 mr-1 p-0 text-center text-md select-none md:h-5">
                     {gameActivity.name.length < 25 ? gameActivity.name : gameActivity.name.slice(0, 25) + "..." }
                   </span>
-                  <Tooltip id="game-playing">
-                    <div>
-                      <h3>Jugando: {gameActivity.name}</h3>
-                      <p>{gameActivity.details}</p>
-                      <p>{gameActivity.state}</p>
+                  <Tooltip id="game-playing" style={{ backgroundColor: '#2f2f2f', opacity: 1}}>
+                    <div className="flex gap-3">
+                      <div className="items-center justify-center">
+                        <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
+                          className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h3 className="text-md md:text-xl font-bold">{gameActivity.name}</h3>
+                        <p className="text-sm md:text-md font-semibold">{gameActivity.details}</p>
+                        <p className="text-sm md:text-md">{gameActivity.state}</p>
+                      </div>
                     </div>
                   </Tooltip>
                 </button>
@@ -49,12 +55,24 @@ const DiscordPresence = () => {
 
           {status.spotify && (
             <div>
-              <a target="_blank" data-tooltip-id="spotify-song" data-tooltip-content={`Escuchando en Spotify: ${status.spotify.artist} - ${status.spotify.song}`} data-tooltip-place="bottom" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-50 ease-in-out mt-3">
+              <a target="_blank" data-tooltip-id="spotify-song" data-tooltip-place="bottom" href={`https://open.spotify.com/track/${status.spotify.track_id}`} className="spotify-button select-none rounded-xl py-2 px-3 gap-2 items-center inline-flex text-gray-300 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-50 ease-in-out mt-3">
                 <img src="spotify.svg" alt="" className={`status-dot`}></img>
                 <span className="m-0 mr-1 p-0 text-center text-md select-none md:h-5">
                   {status.spotify.artist.length < 25 ? status.spotify.artist : (status.spotify.artist.slice(0, 25) + '...')} - {status.spotify.song.length < 25 ? status.spotify.song : (status.spotify.song.slice(0, 25) + '...')}
                 </span>
-                <Tooltip id="spotify-song" />
+                <Tooltip id="spotify-song">
+                  <div className="flex gap-3">
+                      <div className="items-center justify-center">
+                        <img src={status.spotify.album_art_url} 
+                          className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h3 className="text-md md:text-lg font-bold">{status.spotify.artist}</h3>
+                        <p className="text-sm md:text-md font-semibold">{status.spotify.song}</p>
+                        <p className="text-xs md:text-sm">{status.spotify.album}</p>
+                      </div>
+                  </div>
+                </Tooltip>
               </a>
             </div>
           )}
