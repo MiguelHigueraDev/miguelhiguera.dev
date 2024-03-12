@@ -35,7 +35,7 @@ const DiscordPresence = () => {
                   <span className="m-0 mr-1 p-0 text-center text-md select-none md:h-5">
                     {gameActivity.name.length < 25 ? gameActivity.name : gameActivity.name.slice(0, 25) + "..." }
                   </span>
-                  <Tooltip id="game-playing" style={{ backgroundColor: '#2f2f2f', opacity: 1}}>
+                  <Tooltip id="game-playing" style={{ backgroundColor: '#2f2f2f'}}>
                     <div className="flex gap-3">
                       <div className="items-center justify-center">
                         <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
