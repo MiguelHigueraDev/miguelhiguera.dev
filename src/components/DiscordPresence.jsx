@@ -41,7 +41,7 @@ const DiscordPresence = () => {
                         <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
                           className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
                       </div>
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="flex flex-col items-start justify-center">
                         <h3 className="text-md md:text-xl font-bold">{gameActivity.name}</h3>
                         <p className="text-sm md:text-md font-semibold">{gameActivity.details}</p>
                         <p className="text-sm md:text-md">{gameActivity.state}</p>
@@ -66,7 +66,7 @@ const DiscordPresence = () => {
                         <img src={status.spotify.album_art_url} 
                           className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
                       </div>
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="flex flex-col items-start justify-center text-start">
                         <h3 className="text-md md:text-lg font-bold">{status.spotify.artist}</h3>
                         <p className="text-sm md:text-md font-semibold">{status.spotify.song}</p>
                         <p className="text-xs md:text-sm">{status.spotify.album}</p>
