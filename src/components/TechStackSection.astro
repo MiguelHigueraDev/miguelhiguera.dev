@@ -1,23 +1,17 @@
 ---
 import { Image } from "astro:assets";
 import Separator from "./Separator.astro";
+import TechStack from "./TechStack.astro";
+import { frontend, backend } from "../constants/techstacks"
 ---
 
 <section class="max-w-[900px] mx-auto mt-10" id="tech-stack">
     <Separator />
     <div>
-        <h3 class="text-3xl font-bold text-gray-400 mb-4">Tecnologías principales</h3>
-        <div class="flex justify-center items-center gap-6 flex-wrap mb-20">
-            <Image src="/technologies/javascript.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="JavaScript" />
-            <Image src="/technologies/typescript.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="TypeScript" />
-            <Image src="/technologies/html.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="HTML" />
-            <Image src="/technologies/css.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="CSS" />
-            <Image src="/technologies/php.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="PHP" />
-            <Image src="/technologies/java.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="Java" />
-            <Image src="/technologies/mysql.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="MySQL" />
-            <Image src="/technologies/node.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="Node" />
-            <Image src="/technologies/react.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="React" />
-            <Image src="/technologies/vue.svg" width={200} height={200} loading="lazy" class="inline w-[70px] h-[70px]" alt="Vue" />
+        <h3 class="text-3xl font-bold text-gray-300 mb-6">Tecnologías principales</h3>
+        <div class="flex md:grid grid-cols-2 gap-4 md:gap-10 flex-wrap mb-20 select-none">
+            <TechStack name="Frontend" technologies={frontend} />
+            <TechStack name="Backend" technologies={backend} />
         </div>
     </div>
 </section>

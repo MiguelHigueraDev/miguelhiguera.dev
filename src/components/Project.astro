@@ -16,11 +16,11 @@ interface Technology {
 const { name, description, technologies, liveUrl, repoUrl, image } = Astro.props
 ---
 
-<li class="text-gray-300 border-2 p-4 border-purple-400 rounded-xl flex flex-col justify-between">
+<li class="text-gray-300 border-2 p-4 border-neutral-700 rounded-xl flex flex-col justify-between">
     <div>
         <Image height={226} width={402} src={image} alt={name} class="w-full h-auto rounded-xl mb-3"/>
         <div class="flex gap-2">
-            <h3 class="text-xl font-bold text-purple-500">{name}</h3>
+            <h3 class="text-xl font-bold text-neutral-300">{name}</h3>
             {liveUrl && <a aria-label={`Visita ${name}`}  href={liveUrl} target="_blank" rel="noopener noreferrer"><img loading="lazy" src="/external.svg"class="w-6 h-6" alt="" /></a>}
             {repoUrl && <a aria-label={`Visitar repositorio de Github de ${name}`} href={repoUrl} target="_blank" rel="noopener noreferrer"><img loading="lazy" src="/github.svg" class="w-6 h-6 p-0.5" alt="" /></a>}
         </div>
