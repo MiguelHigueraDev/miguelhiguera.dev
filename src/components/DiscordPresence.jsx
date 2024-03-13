@@ -39,14 +39,25 @@ const DiscordPresence = () => {
                     <div className="flex gap-3">
                       {gameActivity.assets &&
                       <div className="items-center justify-center">
-                          <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
+                          {gameActivity.assets.small_image ?
+                            <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
+                             className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
+                          : 
+                          <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`} 
                           className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
+                          }
+
                       </div>
                        }
                       <div className="flex flex-col items-start justify-center">
                         <h3 className="text-md md:text-xl font-bold">{gameActivity.name}</h3>
                         <p className="text-sm md:text-md font-semibold">{gameActivity.details}</p>
-                        <p className="text-sm md:text-md">{gameActivity.state}</p>
+                        {gameActivity.party ?
+                          <p className="text-sm md:text-md">{gameActivity.state} ({gameActivity.party.size[0]}/{gameActivity.party.size[1]})</p>
+                        :
+                          <p className="text-sm md:text-md">{gameActivity.state}</p>
+                        }
+
                       </div>
                     </div>
                   </Tooltip>
