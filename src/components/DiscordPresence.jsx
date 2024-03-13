@@ -60,7 +60,7 @@ const DiscordPresence = () => {
                             <div className="items-center justify-center relative">
                               <img
                                 src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`}
-                                className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0"
+                                className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0 rounded-md"
                                 alt=""
                               />
                               {gameActivity.assets.small_image && (
@@ -74,7 +74,7 @@ const DiscordPresence = () => {
                           ) : (
                             <img
                               src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`}
-                              className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0"
+                              className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0 rounded-md"
                               alt=""
                             />
                           )}
@@ -138,7 +138,7 @@ const DiscordPresence = () => {
                     <div className="items-center justify-center">
                       <img
                         src={status.spotify.album_art_url}
-                        className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0"
+                        className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0 rounded-md"
                         alt=""
                       />
                     </div>
