@@ -1,6 +1,5 @@
 import { useLanyard } from "react-use-lanyard";
 import { Tooltip } from 'react-tooltip'
-import { startTransition } from "react";
 
 const DiscordPresence = () => {
   const { loading, status } = useLanyard({
@@ -38,16 +37,20 @@ const DiscordPresence = () => {
                   <Tooltip id="game-playing" style={{ backgroundColor: '#2f2f2f'}}>
                     <div className="flex gap-3">
                       {gameActivity.assets &&
-                      <div className="items-center justify-center">
-                          {gameActivity.assets.small_image ?
-                            <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
-                             className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
-                          : 
-                          <img src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`} 
-                          className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" alt="" />
-                          }
-
-                      </div>
+                     <div className="items-center justify-center relative">
+                     <img 
+                         src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`} 
+                         className="h-12 w-12 md:w-20 md:h-20 mt-2 md:mt-0" 
+                         alt=""
+                     />
+                     {gameActivity.assets.small_image &&
+                         <img 
+                             src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`} 
+                             className="absolute bottom-0 right-0 h-6 w-6 md:h-6 md:w-6 rounded-full" 
+                             alt=""
+                         />
+                     }
+                    </div>
                        }
                       <div className="flex flex-col items-start justify-center">
                         <h3 className="text-md md:text-xl font-bold">{gameActivity.name}</h3>
