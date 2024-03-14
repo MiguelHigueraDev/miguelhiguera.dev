@@ -144,10 +144,10 @@ const DiscordPresence = () => {
                     </div>
                     <div className="flex flex-col items-start justify-center text-start">
                       <h3 className="text-md md:text-lg font-bold">
-                        {status.spotify.artist}
+                        {status.spotify.song}
                       </h3>
                       <p className="text-sm md:text-md font-semibold">
-                        {status.spotify.song}
+                        {status.spotify.artist}
                       </p>
                       <p className="text-xs md:text-sm">
                         {status.spotify.album}
