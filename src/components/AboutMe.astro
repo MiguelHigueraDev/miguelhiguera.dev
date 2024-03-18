@@ -1,11 +1,68 @@
 ---
 import Separator from "./Separator.astro";
+import {LanyardDiscordCard} from "discord-card-react"
+import 'discord-card-react/styles'
 ---
 
 <section class="max-w-[900px] mx-auto mt-10" id="about">
     <Separator />
     <h2 class="text-3xl font-bold text-gray-300 mb-4">Sobre mí</h2>
-    <p class="text-gray-300 text-lg">Soy Miguel Higuera, titulado de Ingeniero en Informática en INACAP y desarrollador Full Stack. Desde que tengo memoria me ha apasionado la tecnología, tanto el hardware como software. <br> Tras estudiar la carrera me di cuenta que mi verdadera pasión es el desarrollo de software, con atención tanto a la parte lógica, cómo al diseño.</p>
-    <p class="text-gray-300 text-lg mt-4">Tengo mucha curiosidad y sed de conocimiento, y siempre estoy aprendiendo algo nuevo. Mi objetivo principal es causar impacto en una empresa donde se valore la creatividad y se resuelvan problemas gracias a la creación de software eficiente.</p>
-    <p class="text-gray-300 text-lg mt-4">Hablo inglés fluido.</p>
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <div>
+        <p class="text-gray-300 text-lg">Soy Miguel Higuera, titulado de Ingeniero en Informática en INACAP y desarrollador Full Stack. Desde que tengo memoria me ha apasionado la tecnología, tanto el hardware como software. <br> Tras estudiar la carrera me di cuenta que mi verdadera pasión es el desarrollo de software, con atención tanto a la parte lógica, cómo al diseño.</p>
+        <p class="text-gray-300 text-lg mt-4">Tengo mucha curiosidad y sed de conocimiento, y siempre estoy aprendiendo algo nuevo. Mi objetivo principal es causar impacto en una empresa donde se valore la creatividad y se resuelvan problemas gracias a la creación de software eficiente.</p>
+        <p class="text-gray-300 text-lg mt-4">Hablo inglés fluido.</p>
+      </div>
+      <div class="self-center">
+        <LanyardDiscordCard client:load
+        userId="205519765312241665"
+        imageUrl="pfp.webp"
+        bannerUrl="banner.png"
+        primaryColor="#007777"
+        accentColor="#8500d3"
+        basicInfo={{
+          displayname: "Miguel",
+          username: "miguelhigueradev",
+        }}
+        badges={[{ name: "Active Developer", iconUrl: "developer-badge.png" }]}
+        status={{
+          status: "Apasionado por el desarrollo",
+        }}
+        aboutMe={{
+          title: "Sobre mí",
+          items: [
+            {
+              text: "Apasionado por la tecnología",
+            },
+            {
+              text: "y la programación",
+            },
+            {
+              text: "👨‍💻🖥️",
+            },
+          ],
+        }}
+        memberSince={{
+          title:"Existiendo desde",
+          discordJoinDate: "19 Feb 1999",
+        }}
+        roles={{
+          roles: [
+            { name: "JavaScript", color: "#f7df1e" },
+            { name: "TypeScript", color: "#007acc" },
+            { name: "PHP", color: "#4f3e66" },
+            { name: "CSS", color: "#4372c4" },
+            { name: "HTML", color: "#ed731c" },
+          ],
+        }}
+        showSpotify={true}
+        showGames={true}
+        priority="none"
+      ></LanyardDiscordCard>
+      <a href="https://github.com/MiguelHigueraDev/discord-card-react" target="_blank" class="block mt-2 text-purple-300 hover:text-purple-200 font-bold text-center">¡Componente creado por mí!</a>
+      </div>
+    </div>
+
+   
 </section>

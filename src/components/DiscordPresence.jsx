@@ -14,6 +14,8 @@ const DiscordPresence = () => {
     offline: "Desconectado",
   };
 
+
+
   const gameActivity =
     status && status.activities
       ? status.activities.find((ac) => ac.type === 0)
