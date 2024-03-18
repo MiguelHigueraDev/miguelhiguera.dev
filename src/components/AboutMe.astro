@@ -13,8 +13,14 @@ import 'discord-card-react/styles'
         <p class="text-gray-300 text-lg">Soy Miguel Higuera, titulado de Ingeniero en Informática en INACAP y desarrollador Full Stack. Desde que tengo memoria me ha apasionado la tecnología, tanto el hardware como software. <br> Tras estudiar la carrera me di cuenta que mi verdadera pasión es el desarrollo de software, con atención tanto a la parte lógica, cómo al diseño.</p>
         <p class="text-gray-300 text-lg mt-4">Tengo mucha curiosidad y sed de conocimiento, y siempre estoy aprendiendo algo nuevo. Mi objetivo principal es causar impacto en una empresa donde se valore la creatividad y se resuelvan problemas gracias a la creación de software eficiente.</p>
         <p class="text-gray-300 text-lg mt-4">Hablo inglés fluido.</p>
+        <div class="hidden md:block">
+          <img src="component-text-es.png" alt="Componente Discord Card creado por mí." width="500" class="h-auto" />
+          <a href="https://github.com/MiguelHigueraDev/discord-card-react" target="_blank" aria-label="Ir al repositorio del componente Discord Card"><img src="view-code-es.png" class="w-48 h-auto relative left-[80px] bottom-[20px]" /></a>
+        </div>
+       
       </div>
-      <div class="self-center">
+      <div class="self-center flex flex-col md:block gap-3 md:gap-0">
+        <a href="https://github.com/MiguelHigueraDev/discord-card-react" aria-label="Ir al repositorio del componente Discord Card, creado por mí." target="_blank" class="sm:flex items-center justify-center md:hidden mt-2 text-purple-300 hover:text-purple-200 font-bold text-center"><img src="component-text-sm-es.png" alt="Componente Discord Card creado por mí." width="300" class="h-auto"></a>
         <LanyardDiscordCard client:load
         userId="205519765312241665"
         imageUrl="pfp.webp"
@@ -62,7 +68,6 @@ import 'discord-card-react/styles'
         showGames={true}
         priority="none"
       ></LanyardDiscordCard>
-      <a href="https://github.com/MiguelHigueraDev/discord-card-react" target="_blank" class="block mt-2 text-purple-300 hover:text-purple-200 font-bold text-center">¡Componente creado por mí!</a>
       </div>
     </div>
 
