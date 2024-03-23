@@ -10,6 +10,5 @@ export default {
 			}
 		},
 	},
-	darkMOde: 'class',
 	plugins: [],
 }
