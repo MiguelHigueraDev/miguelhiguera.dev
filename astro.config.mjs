@@ -12,5 +12,9 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     }
-  })
+  }),
+  i18n: {
+    defaultLocale: "es",
+    locales: ["en"]
+  }
 });
