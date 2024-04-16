@@ -2,6 +2,7 @@
 import Separator from "./Separator.astro";
 import { LanyardDiscordCard } from "discord-card-react";
 import "discord-card-react/styles";
+import MisfitCard from "./MisfitCard";
 ---
 
 <section class="max-w-[900px] mx-auto mt-10" id="about">
@@ -44,63 +45,7 @@ import "discord-card-react/styles";
     </div>
     <div class="self-center flex flex-col md:block gap-3 md:gap-0">
       <div class="flex-grow self-center" style={{fontFamily: 'ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important'}}>
-        <LanyardDiscordCard
-          client:load
-          userId="205519765312241665"
-          imageUrl="pfp.webp"
-          bannerUrl="banner.webp"
-          primaryColor="#007777"
-          accentColor="#8500d3"
-          basicInfo={{
-            displayname: "Miguel",
-            username: "miguelhigueradev",
-          }}
-          badges={[
-            { name: "Active Developer", iconUrl: "developer-badge.png" },
-          ]}
-          status={{
-            status: "Apasionado por el desarrollo",
-          }}
-          aboutMe={{
-            title: "Sobre mí",
-            items: [
-              {
-                text: "Apasionado por la tecnología",
-              },
-              {
-                text: "y la programación",
-              },
-              {
-                text: "INTP",
-                marginBottom: 8
-              },
-              {
-                text: "👨‍💻🖥️",
-              },
-            ],
-          }}
-          memberSince={{
-            title: "Existiendo desde",
-            discordJoinDate: "9 Feb 1999",
-          }}
-          roles={{
-            roles: [
-              { name: "JavaScript", color: "#f7df1e" },
-              { name: "TypeScript", color: "#007acc" },
-              { name: "Java", color: "#f89820" },
-              { name: "PHP", color: "#4f3e66" },
-              { name: "React", color: "#61DBFB" },
-              { name: "Vue", color: "#41B883" },
-            ],
-          }}
-          spotifyTitle="Escuchando en Spotify"
-          gameTitle="Ahora jugando"
-          showSpotify={true}
-          showGames={true}
-          priority="none"
-          timeElapsedText="transcurridos"
-          timeAlignment="left"
-        />
+        <MisfitCard client:load />
       </div>
       <a
         href="https://github.com/MiguelHigueraDev/discord-card-react"
