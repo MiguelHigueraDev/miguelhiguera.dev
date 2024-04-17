@@ -1,11 +1,19 @@
+---
+interface Props {
+    experience: string;
+    projects: string;
+    aboutMe: string;
+}
 
+const { experience, projects, aboutMe } = Astro.props;
+---
 <header class="flex justify-center items-center">
   
     <nav class="bg-neutral-700 p-2 rounded-xl">
         <ul class="flex gap-1 text-sm font-semibold lowercase text-white">
-            <li class="p-1"><a href="#experience" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">Experiencia</a></li>
-            <li class="p-1"><a href="#projects" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">Proyectos</a></li>
-            <li class="p-1"><a href="#about" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">Sobre mí</a></li>
+            <li class="p-1"><a href="#experience" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">{experience}</a></li>
+            <li class="p-1"><a href="#projects" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">{projects}</a></li>
+            <li class="p-1"><a href="#about" class="hover:bg-purple-600 rounded-xl p-2 transition-colors duration-125 ease-in-out">{aboutMe}</a></li>
         </ul>
     </nav>
 </header>
