@@ -1,0 +1,17 @@
+---
+interface Props {
+  otherLanguage: string;
+  otherLanguageUrl: string;
+  countryCode: string;
+}
+
+const { otherLanguage, otherLanguageUrl, countryCode } = Astro.props;
+---
+
+<a
+  href={otherLanguageUrl}
+  class="flex items-center hover:bg-purple-600 p-2 rounded-lg gap-2 mt-2 md:mt-0 text-white font-semibold text-lg"
+>
+  <img src={`flag-${countryCode}.png`} alt="" class="w-auto h-8 mb-0.5" />
+  {otherLanguage}
+</a>
