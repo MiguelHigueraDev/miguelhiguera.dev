@@ -51,7 +51,7 @@ export const backend = [
         icon: "mysql.svg"
     },
     {
-        name: "PostgresSQL",
+        name: "PostgreSQL",
         icon: "postgresql.svg"
     },
 ]

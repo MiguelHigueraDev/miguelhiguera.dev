@@ -4,15 +4,12 @@ import { Image } from "astro:assets"
 interface Project {
     name: string,
     description: string,
-    technologies: Technology[],
+    technologies: string[],
     liveUrl: string,
     repoUrl: string,
     image: string
 }
 
-interface Technology {
-    name: string
-}
 const { name, description, technologies, liveUrl, repoUrl, image } = Astro.props
 ---
 

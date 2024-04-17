@@ -1,29 +1,22 @@
 ---
 import Separator from "./Separator.astro";
-import Experience from "../components/Experience.astro";
+import type { Experience as exp } from "../interfaces/Experience";
+import Experience from "./Experience.astro";
+
+interface Props {
+  experience: exp[];
+  title: string;
+}
+
+const { experience, title } = Astro.props;
 ---
 
 <section class="max-w-[900px] mx-auto mt-12" id="experience">
   <Separator />
-  <h2 class="text-3xl font-bold text-gray-300 mb-4">Experiencia</h2>
+  <h2 class="text-3xl font-bold text-gray-300 mb-4">{title}</h2>
   <ol class="relative border-s-2 border-purple-600">
-    <Experience
-    date="Mayo 2023 - Actualidad"
-    title="Desarrollador Aplicación Facturación - Ferretería Cerro Colorado"
-    description="Diseño y creación de aplicación SPA de manejo de inventario y ventas con facturación electrónica integrada con el SII, con sistema de roles y permisos. Desplegada utilizando nginx en un servidor Linux."
-    technologies={["PHP", "Laravel", "Vue", "Splade", "MySQL"]}
-    />
-    <Experience
-      date="Noviembre 2022 - Mayo 2023"
-      title="Desarrollador Laravel Full Stack - Municipalidad de Los Ángeles"
-      description="Desarrollo de una aplicación de encuestas, orientada a la población de la ciudad. Aplicación maneja tanto la creación como distribución de las encuestas, y la visualización de las estadísticas. Aplicación integrada con ClaveÚnica para registro e inicio de sesión, además de geolocalización."
-      technologies={["PHP", "Laravel", "jQuery", "MySQL"]}
-    />
-    <Experience
-      date="Febrero 2022 - Marzo 2022"
-      title="Práctica laboral Laravel Full Stack - Municipalidad de Los Ángeles"
-      description="Porte de sistema de manejo de proveedores antiguo (legacy) a PHP utilizando Laravel y jQuery."
-      technologies={["PHP", "Laravel", "jQuery", "MySQL"]}
-    />
+    {experience.map((exp) => (
+      <Experience {...exp}  />
+    ))}
   </ol>
 </section>

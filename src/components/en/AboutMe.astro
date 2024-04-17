@@ -1,31 +1,59 @@
 ---
-import Separator from "./Separator.astro";
-import { LanyardDiscordCard } from "discord-card-react";
+import Separator from "../Separator.astro";
 import "discord-card-react/styles";
-import MisfitCard from "./MisfitCard";
+import MisfitCard from "./MisfitCardEn";
+
+interface Props {
+  title: string,
+  introduction: string,
+  lookingForAJob: string,
+  inquisitiveness: string,
+  mainLanguages1: string,
+  mainLanguages2: string,
+  featuredLanguages: string,
+  fluentEnglish: string,
+  componentCreatedByMe: string,
+  viewRepository: string,
+  viewSource: string,
+  componentImageUrl: string,
+  viewSourceImageUrl: string,
+}
+
+const { title, 
+introduction, 
+lookingForAJob, 
+inquisitiveness,
+mainLanguages1,
+mainLanguages2,
+featuredLanguages, 
+fluentEnglish, 
+componentCreatedByMe,
+viewRepository,
+viewSource,
+componentImageUrl,
+viewSourceImageUrl } = Astro.props;
 ---
 
 <section class="max-w-[900px] mx-auto mt-10" id="about">
   <Separator />
-  <h2 class="text-3xl font-bold text-gray-300 mb-4">Sobre mí</h2>
+  <h2 class="text-3xl font-bold text-gray-300 mb-4">{title}</h2>
 
   <div class="flex flex-col md:flex-row gap-4 text-gray-300 text-lg">
     <div>
       <p>
-        Soy Miguel Higuera, desarrollador chileno 🇨🇱 titulado de Ingeniero en Informática en INACAP. <strong>Actualmente me encuentro buscando una nueva oportunidad laboral.</strong>
+        {introduction} <strong>{lookingForAJob}</strong>
       </p>
       <p class="mt-4">
-        Muy apasionado por la computación, tengo mucha curiosidad y sed de conocimiento, y siempre estoy
-        aprendiendo algo nuevo para poder mejorar mis habilidades.
+        {inquisitiveness}
       </p>
       <p class="mt-4">
-        Mis lenguajes principales son <strong>JavaScript, TypeScript, Java y PHP</strong>, pero también he trabajado con otros lenguajes.</strong>
+        {mainLanguages1} <strong>{featuredLanguages}</strong>{mainLanguages2}</strong>
       </p>
-      <strong class="mt-4 block">Hablo inglés fluido.</strong>
+      <strong class="mt-4 block">{fluentEnglish}</strong>
       <div class="hidden md:flex md:flex-col h-[50%] justify-center items-center">
         <img
-          src="component-text-es.webp"
-          alt="Componente Discord Card creado por mí."
+          src={componentImageUrl}
+          alt={componentCreatedByMe}
           width="1608"
           height="755"
           class="h-auto"
@@ -34,9 +62,9 @@ import MisfitCard from "./MisfitCard";
           href="https://github.com/MiguelHigueraDev/discord-card-react"
           target="_blank"
           class="h-auto"
-          aria-label="Ir al repositorio del componente Discord Card"
+          aria-label={viewRepository}
           ><img
-            src="view-code-es.webp"
+            src={viewSourceImageUrl}
             alt=""
             class="w-48 h-auto"
           /></a
@@ -49,10 +77,10 @@ import MisfitCard from "./MisfitCard";
       </div>
       <a
         href="https://github.com/MiguelHigueraDev/discord-card-react"
-        aria-label="Ir al repositorio del componente Discord Card, creado por mí."
+        aria-label={viewRepository}
         target="_blank"
         class="sm:flex self-center w-30 h-auto items-center justify-center md:hidden mt-2 text-purple-300 hover:text-purple-200 font-bold text-center"
-        >Ver código</a
+        >{viewSource}</a
       >
     </div>
   </div>

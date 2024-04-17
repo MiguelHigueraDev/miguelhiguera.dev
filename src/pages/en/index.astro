@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Experience from "../../components/ExperienceSection.astro";
+import Projects from "../../components/ProjectsSection.astro";
+import AboutMeEn from "../../components/en/AboutMe.astro";
+import TechStackSection from "../../components/TechStackSection.astro";
+import { experiences } from "../../constants/en/experience";
+import { projects } from "../../constants/en/projects";
+---
+
+<Layout title="Miguel Higuera.">
+  <Header experience="Experience" projects="Projects" aboutMe="About Me" otherLanguage="Español" otherLanguageUrl="/" />
+  <main>
+    <Hero
+      hiIAm="Hi, I'm"
+      jobTitle="Software Developer"
+      tagline="Bringing ideas to life through code"
+      visitMy="Visit my"
+      emailMeAt="Email me at"
+      photoAlt="Miguel Higuera"
+    />
+    <AboutMeEn
+      title="About me"
+      introduction="I'm Miguel Higuera, a Chilean 🇨🇱 software developer."
+      lookingForAJob="I'm currently looking for a job opportunity."
+      inquisitiveness="I'm very passionate about everything tech related. I'm highly curious and I'm always seeking new knowledge to sharpen my skills."
+      mainLanguages1="My main programming languages are "
+      featuredLanguages="JavaScript, TypeScript, Java, and PHP"
+      mainLanguages2=", but I have worked with other languages as well."
+      fluentEnglish="I speak fluent English and Spanish."
+      componentCreatedByMe="Discord Card component created by me"
+      viewRepository="Visit Discord Card repository"
+      componentImageUrl="component-text-en.webp"
+      viewSourceImageUrl="view-code-en.webp"
+      viewSource="View source code"
+    />
+    <Experience experience={experiences} title="Experience" />
+    <Projects projects={projects} title="Projects" />
+    <TechStackSection title="Tech stack" />
+  </main>
+</Layout>

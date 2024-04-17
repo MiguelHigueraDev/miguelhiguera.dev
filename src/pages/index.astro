@@ -1,20 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
-import Hero from '../components/Hero.astro'
-import Experience from '../components/ExperienceSection.astro'
-import Projects from '../components/ProjectsSection.astro'
-import AboutMe from '../components/AboutMe.astro'
-import TechStackSection from '../components/TechStackSection.astro'
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/ExperienceSection.astro";
+import Projects from "../components/ProjectsSection.astro";
+import AboutMe from "../components/es/AboutMe.astro";
+import TechStackSection from "../components/TechStackSection.astro";
+import { experiences } from "../constants/es/experience";
+import { projects } from "../constants/es/projects";
 ---
 
 <Layout title="Miguel Higuera.">
-	<Header />
-	<main>
-		<Hero />
-		<AboutMe />
-		<Experience />
-		<Projects />
-		<TechStackSection />
-	</main>
+  <Header experience="Experiencia" projects="Proyectos" aboutMe="Sobre mí" otherLanguage="English" otherLanguageUrl="/en"/>
+  <main>
+    <Hero
+      hiIAm="Hola, soy"
+      jobTitle="Ingeniero de Software"
+      tagline="Transformando ideas en realidad a través del código"
+      visitMy="Visita mi"
+      emailMeAt="Envíame un email"
+      photoAlt="Fotografía de Miguel"
+    />
+    <AboutMe
+      title="Sobre mí"
+      introduction="Soy Miguel Higuera, desarrollador chileno 🇨🇱 titulado de Ingeniero en Informática en INACAP."
+      lookingForAJob="Actualmente me encuentro buscando una nueva oportunidad laboral."
+      inquisitiveness="Muy apasionado por la computación, tengo mucha curiosidad y sed de conocimiento, y siempre estoy aprendiendo algo nuevo para poder mejorar mis habilidades."
+      mainLanguages1="Mis lenguajes principales son"
+      featuredLanguages="JavaScript, TypeScript, Java y PHP"
+      mainLanguages2=", pero también he trabajado con otros lenguajes."
+      fluentEnglish="Hablo inglés fluido."
+      componentCreatedByMe="Componente Discord Card creado por mí."
+      viewRepository="Ir al repositorio del componente Discord Card"
+      componentImageUrl="component-text-es.webp"
+      viewSourceImageUrl="view-code-es.webp"
+      viewSource="Ver código"
+    />
+    <Experience experience={experiences} title="Experiencia" />
+    <Projects projects={projects} title="Proyectos" />
+    <TechStackSection title="Tecnologías" />
+  </main>
 </Layout>

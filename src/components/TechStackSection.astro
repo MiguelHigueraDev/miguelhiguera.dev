@@ -1,14 +1,19 @@
 ---
-import { Image } from "astro:assets";
 import Separator from "./Separator.astro";
 import TechStack from "./TechStack.astro";
 import { frontend, backend } from "../constants/techstacks"
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <section class="max-w-[900px] mx-auto mt-10" id="tech-stack">
     <Separator />
     <div>
-        <h3 class="text-3xl font-bold text-gray-300 mb-6">Tecnologías principales</h3>
+        <h3 class="text-3xl font-bold text-gray-300 mb-6">{title}</h3>
         <div class="md:grid grid-cols-2 space-y-6 md:space-y-0 gap-4 md:gap-10 flex-wrap mb-20 select-none">
             <TechStack name="Frontend" technologies={frontend} />
             <TechStack name="Backend" technologies={backend} />

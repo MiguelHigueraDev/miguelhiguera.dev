@@ -1,0 +1,87 @@
+---
+import Separator from "../Separator.astro";
+import "discord-card-react/styles";
+import MisfitCard from "./MisfitCardEs";
+
+interface Props {
+  title: string,
+  introduction: string,
+  lookingForAJob: string,
+  inquisitiveness: string,
+  mainLanguages1: string,
+  mainLanguages2: string,
+  featuredLanguages: string,
+  fluentEnglish: string,
+  componentCreatedByMe: string,
+  viewRepository: string,
+  viewSource: string,
+  componentImageUrl: string,
+  viewSourceImageUrl: string,
+}
+
+const { title, 
+introduction, 
+lookingForAJob, 
+inquisitiveness,
+mainLanguages1,
+mainLanguages2,
+featuredLanguages, 
+fluentEnglish, 
+componentCreatedByMe,
+viewRepository,
+viewSource,
+componentImageUrl,
+viewSourceImageUrl } = Astro.props;
+---
+
+<section class="max-w-[900px] mx-auto mt-10" id="about">
+  <Separator />
+  <h2 class="text-3xl font-bold text-gray-300 mb-4">{title}</h2>
+
+  <div class="flex flex-col md:flex-row gap-4 text-gray-300 text-lg">
+    <div>
+      <p>
+        {introduction} <strong>{lookingForAJob}</strong>
+      </p>
+      <p class="mt-4">
+        {inquisitiveness}
+      </p>
+      <p class="mt-4">
+        {mainLanguages1} <strong>{featuredLanguages}</strong>{mainLanguages2}</strong>
+      </p>
+      <strong class="mt-4 block">{fluentEnglish}</strong>
+      <div class="hidden md:flex md:flex-col h-[50%] justify-center items-center">
+        <img
+          src={componentImageUrl}
+          alt={componentCreatedByMe}
+          width="1608"
+          height="755"
+          class="h-auto"
+        />
+        <a
+          href="https://github.com/MiguelHigueraDev/discord-card-react"
+          target="_blank"
+          class="h-auto"
+          aria-label={viewRepository}
+          ><img
+            src={viewSourceImageUrl}
+            alt=""
+            class="w-48 h-auto"
+          /></a
+        >
+      </div>
+    </div>
+    <div class="self-center flex flex-col md:block gap-3 md:gap-0">
+      <div class="flex-grow self-center" style={{fontFamily: 'ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important'}}>
+        <MisfitCard client:load />
+      </div>
+      <a
+        href="https://github.com/MiguelHigueraDev/discord-card-react"
+        aria-label={viewRepository}
+        target="_blank"
+        class="sm:flex self-center w-30 h-auto items-center justify-center md:hidden mt-2 text-purple-300 hover:text-purple-200 font-bold text-center"
+        >{viewSource}</a
+      >
+    </div>
+  </div>
+</section>
