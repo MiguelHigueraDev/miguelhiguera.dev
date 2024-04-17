@@ -4,8 +4,9 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/ExperienceSection.astro";
 import Projects from "../components/ProjectsSection.astro";
-import AboutMe from "../components/AboutMe.astro";
+import AboutMe from "../components/es/AboutMe.astro";
 import TechStackSection from "../components/TechStackSection.astro";
+import { experiences } from "../constants/es/experience";
 ---
 
 <Layout title="Miguel Higuera.">
@@ -34,7 +35,7 @@ import TechStackSection from "../components/TechStackSection.astro";
 	  viewSourceImageUrl="view-code-es.webp"
 	  viewSource="Ver código"
     />
-    <Experience />
+    <Experience experience={experiences} />
     <Projects />
     <TechStackSection />
   </main>
