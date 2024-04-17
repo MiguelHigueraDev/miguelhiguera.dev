@@ -18,7 +18,7 @@ const { hiIAm, jobTitle, tagline, visitMy, emailMeAt, photoAlt } = Astro.props;
         <p class="text-xl font-semibold text-gray-400">{hiIAm}</p>
         <p class="text-5xl font-black text-purple-600 mt-1 tracking-tight">Miguel Higuera<span class="text-gray-400 font-black">.</span></p>
         <p class="text-xl font-bold text-neutral-300 mt-1">{jobTitle}</p>
-        <p class="text-lg text-gray-300">{tagline}</p>
+        <p class="text-lg text-gray-300 max-w-[300px] md:max-w-[900px]">{tagline}</p>
         <div class="mt-2 flex gap-3 mb-3">
             <a href="https://www.linkedin.com/in/miguelhigueradev/" target="_blank" rel="noopener noreferrer" class="" aria-label=`${visitMy} LinkedIn`><img src="/linkedin.svg" class="inline w-6 h-6" alt="" /></a>
             <a href="https://github.com/miguelhigueradev" target="_blank" rel="noopener noreferrer" class="" aria-label=`${visitMy} GitHub`><img src="/github-purple.svg" class="inline w-6 h-6" alt="" /></a>
