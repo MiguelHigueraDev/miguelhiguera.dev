@@ -6,6 +6,7 @@ import Experience from "../components/ExperienceSection.astro";
 import Projects from "../components/ProjectsSection.astro";
 import AboutMe from "../components/es/AboutMe.astro";
 import TechStackSection from "../components/TechStackSection.astro";
+import Footer from "../components/Footer.astro";
 import { experiences } from "../constants/es/experience";
 import { projects } from "../constants/es/projects";
 ---
@@ -40,4 +41,5 @@ import { projects } from "../constants/es/projects";
     <Projects projects={projects} title="Proyectos" />
     <TechStackSection title="Tecnologías" />
   </main>
+  <Footer />
 </Layout>
