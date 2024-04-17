@@ -7,6 +7,7 @@ import Projects from "../../components/ProjectsSection.astro";
 import AboutMeEn from "../../components/en/AboutMe.astro";
 import TechStackSection from "../../components/TechStackSection.astro";
 import { experiences } from "../../constants/en/experience";
+import { projects } from "../../constants/en/projects";
 ---
 
 <Layout title="Miguel Higuera.">
@@ -36,7 +37,7 @@ import { experiences } from "../../constants/en/experience";
     viewSource="View source code"
     />
     <Experience experience={experiences} title="Experience" />
-    <Projects />
+    <Projects projects={projects} title="Projects" />
     <TechStackSection />
   </main>
 </Layout>
