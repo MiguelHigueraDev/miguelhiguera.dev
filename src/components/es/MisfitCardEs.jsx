@@ -68,6 +68,7 @@ const MisfitCard = () => {
         accentColor: "#8500d3",
         placeholder: "Mensaje @miguelhigueradev",
       }}
+      playOnSpotifyText="Escuchar en Spotify"
     />
   );
 };
