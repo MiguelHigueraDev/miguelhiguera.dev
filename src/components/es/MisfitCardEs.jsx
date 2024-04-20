@@ -59,7 +59,7 @@ const MisfitCard = () => {
       gameTitle="Ahora jugando"
       showSpotify={true}
       showGames={true}
-      priority="none"
+      priority="default"
       timeElapsedText="transcurridos"
       timeAlignment="left"
       message={{
