@@ -55,20 +55,26 @@ const MisfitCard = () => {
           { name: "Vue", color: "#41B883" },
         ],
       }}
-      spotifyTitle="Escuchando en Spotify"
-      gameTitle="Ahora jugando"
-      showSpotify={true}
-      showGames={true}
       priority="default"
-      timeElapsedText="transcurridos"
-      timeAlignment="left"
+      activity={{
+        show: true,
+        title: "Ahora jugando",
+        timeElapsedText: "transcurridos",
+        timeAlignment: "left",
+      }}
+      spotify={{
+        show: true,
+        title: "Escuchando en Spotify",
+        buttonText: "Escuchar en Spotify",
+        byText: "de",
+        onText: "en",
+      }}
       message={{
         handleInput: handleMessageChange,
         message: message,
         accentColor: "#8500d3",
         placeholder: "Mensaje @miguelhigueradev",
       }}
-      playOnSpotifyText="Escuchar en Spotify"
     />
   );
 };

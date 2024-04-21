@@ -55,8 +55,6 @@ const MisfitCard = () => {
         ],
       }}
       priority="default"
-      showSpotify={true}
-      showGames={true}
       message={{
         handleInput: handleMessageChange,
         message: message,
