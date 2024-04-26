@@ -61,6 +61,7 @@ const MisfitCard = () => {
         title: "Ahora jugando",
         timeElapsedText: "transcurridos",
         timeAlignment: "left",
+        showElapsedTime: true,
       }}
       spotify={{
         show: true,
