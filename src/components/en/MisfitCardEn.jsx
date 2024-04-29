@@ -54,7 +54,7 @@ const MisfitCard = () => {
           { name: "Vue", color: "#41B883" },
         ],
       }}
-      priority="default"
+      priority="spotify"
       message={{
         handleInput: handleMessageChange,
         message: message,

@@ -55,7 +55,7 @@ const MisfitCard = () => {
           { name: "Vue", color: "#41B883" },
         ],
       }}
-      priority="default"
+      priority="spotify"
       activity={{
         show: true,
         title: "Ahora jugando",
