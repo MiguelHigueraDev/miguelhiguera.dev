@@ -31,16 +31,20 @@ export const frontend = [
 
 export const backend = [
     {
+        name: "Spring",
+        icon: "spring.svg"
+    },
+    {
+        name: "Java",
+        icon: "java.svg"
+    },
+    {
         name: "PHP",
         icon: "php.svg"
     },
     {
         name: "Laravel",
         icon: "laravel.svg"
-    },
-    {
-        name: "Java",
-        icon: "java.svg"
     },
     {
         name: "Node",
