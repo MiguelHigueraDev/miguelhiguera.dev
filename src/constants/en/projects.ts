@@ -9,6 +9,14 @@ export const projects: Project[] = [
         repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
     },
     {
+        name: "URL Shortener",
+        description: "Simple URL shortener. Uses Spring Boot and Angular, providing a separation between backend and frontend. Links are stored in a Postgres database. Hosted in a Docker container.",
+        technologies: ["Spring Boot", "Java", "Angular", "TypeScript", "Docker"],
+        image: "/shortener.webp",
+        liveUrl: "https://misft.me",
+        repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
+    },
+    {
         name: "raccoonBot",
         description: "Multi-purpose and extensible Discord bot that increases interactions on your server, providing various utilities such as games, birthday reminders, polls, among others. Used in more than 10 servers.",
         technologies: ["TypeScript", "Node.js"],
