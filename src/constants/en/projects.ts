@@ -2,11 +2,10 @@ import type { Project } from "../../interfaces/Project";
 
 export const projects: Project[] = [
     {
-        name: "MoodList",
-        description: "Web application that uses the Spotify API to show recommendations based on your musical tastes and various parameters such as its energy level, positivity, etc.",
-        technologies: ["Svelte", "HTML", "CSS"],
-        image: "/moodlist.webp",
-        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
+        name: "Ferretería Cerro Colorado",
+        description: "Single-page application made for a local hardware store. It allows the store to keep track of inventory and to sell products, generating Chilean SII DTEs (Documento Tributario Electrónico). It also allows the store to view sales reports, to see statistics, and more.",
+        technologies: ["PHP", "Laravel", "MySQL", "Vue", "HTML", "CSS"],
+        image: "/ferreteria.webp",
     },
     {
         name: "URL Shortener",
@@ -15,6 +14,13 @@ export const projects: Project[] = [
         image: "/shortener.webp",
         liveUrl: "https://misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
+    },
+    {
+        name: "MoodList",
+        description: "Web application that uses the Spotify API to show recommendations based on your musical tastes and various parameters such as its energy level, positivity, etc.",
+        technologies: ["Svelte", "HTML", "CSS"],
+        image: "/moodlist.webp",
+        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
     },
     {
         name: "raccoonBot",
