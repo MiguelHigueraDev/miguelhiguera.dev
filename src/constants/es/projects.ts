@@ -16,11 +16,11 @@ export const projects: Project[] = [
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
     {
-        name: "MoodList",
-        description: "Aplicación web que utiliza la API de Spotify para mostrar recomendaciones basadas en tus gustos musicales y en diversos parámetros como su nivel de energía, positividad, etc.",
-        technologies: ["Svelte", "HTML", "CSS"],
-        image: "/moodlist.webp",
-        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
+        name: "dorg",
+        description: "Herramienta CLI experimental que permite organizar rápidamente archivos en una carpeta, creando carpetas y moviendo archivos para que estén ordenados por su fecha de creación.",
+        technologies: ["Rust"],
+        image: "/dorg.webp",
+        repoUrl: "https://github.com/MiguelHigueraDev/dorg"
     },
     {
         name: "raccoonBot",
@@ -31,12 +31,11 @@ export const projects: Project[] = [
         repoUrl: "https://github.com/MiguelHigueraDev/raccoonbot-ts"
     },
     {
-        name: "Battleship JS",
-        description: "Juego de combate naval de un jugador en el que se puede jugar contra una IA que ataca de manera inteligente (atacando coordenadas adyacentes a sus impactos).",
-        technologies: ["JavaScript", "HTML", "CSS"],
-        image: "/battleship.webp",
-        liveUrl: "https://battleship.miguelhiguera.dev",
-        repoUrl: "https://github.com/MiguelHigueraDev/battleship-js"
+        name: "MoodList",
+        description: "Aplicación web que utiliza la API de Spotify para mostrar recomendaciones basadas en tus gustos musicales y en diversos parámetros como su nivel de energía, positividad, etc.",
+        technologies: ["Svelte", "HTML", "CSS"],
+        image: "/moodlist.webp",
+        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
     },
     {
         name: "IP Log Filter",

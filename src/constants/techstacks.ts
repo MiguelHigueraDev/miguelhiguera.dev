@@ -58,4 +58,8 @@ export const backend = [
         name: "PostgreSQL",
         icon: "postgresql.svg"
     },
+    {
+        name: "Rust",
+        icon: "rust.svg"
+    },
 ]

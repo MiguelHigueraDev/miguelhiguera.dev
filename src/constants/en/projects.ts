@@ -16,11 +16,11 @@ export const projects: Project[] = [
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
     {
-        name: "MoodList",
-        description: "Web application that uses the Spotify API to show recommendations based on your musical tastes and various parameters such as its energy level, positivity, etc.",
-        technologies: ["Svelte", "HTML", "CSS"],
-        image: "/moodlist.webp",
-        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
+        name: "dorg",
+        description: "Experimental CLI tool that allows you to quickly organize files in a folder, creating folders and moving files so they are sorted by their creation date.",
+        technologies: ["Rust"],
+        image: "/dorg.webp",
+        repoUrl: "https://github.com/MiguelHigueraDev/dorg"
     },
     {
         name: "raccoonBot",
@@ -31,12 +31,11 @@ export const projects: Project[] = [
         repoUrl: "https://github.com/MiguelHigueraDev/raccoonbot-ts"
     },
     {
-        name: "Battleship JS",
-        description: "Single-player battleship game where you play against a smart AI (attacking coordinates adjacent to its hits).",
-        technologies: ["JavaScript", "HTML", "CSS"],
-        image: "/battleship.webp",
-        liveUrl: "https://battleship.miguelhiguera.dev",
-        repoUrl: "https://github.com/MiguelHigueraDev/battleship-js"
+        name: "MoodList",
+        description: "Web application that uses the Spotify API to show recommendations based on your musical tastes and various parameters such as its energy level, positivity, etc.",
+        technologies: ["Svelte", "HTML", "CSS"],
+        image: "/moodlist.webp",
+        repoUrl: "https://github.com/MiguelHigueraDev/moodlist"
     },
     {
         name: "IP Log Filter",
