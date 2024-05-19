@@ -12,7 +12,7 @@ export const projects: Project[] = [
         description: "Simple URL shortener. Uses Spring Boot and Angular, providing a separation between backend and frontend. Links are stored in a Postgres database. Hosted in a Docker container.",
         technologies: ["Spring Boot", "Java", "Angular", "TypeScript", "Docker"],
         image: "/shortener.webp",
-        liveUrl: "https://misft.me",
+        liveUrl: "https://create.misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
     {

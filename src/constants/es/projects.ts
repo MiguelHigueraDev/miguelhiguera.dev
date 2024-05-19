@@ -12,7 +12,7 @@ export const projects: Project[] = [
         description: "Acortador de URLs simple. Utiliza Spring Boot y Angular, separando el backend del frontend. Los enlaces se almacenan en una base de datos Postgres. Alojado en un contenedor Docker.",
         technologies: ["Spring Boot", "Java", "Angular", "TypeScript", "Docker"],
         image: "/shortener.webp",
-        liveUrl: "https://misft.me",
+        liveUrl: "https://create.misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
     {
