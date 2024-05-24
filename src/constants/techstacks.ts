@@ -47,19 +47,11 @@ export const backend = [
         icon: "laravel.svg"
     },
     {
-        name: "Node",
-        icon: "node.svg"
-    },
-    {
         name: "MySQL",
         icon: "mysql.svg"
     },
     {
         name: "PostgreSQL",
         icon: "postgresql.svg"
-    },
-    {
-        name: "Rust",
-        icon: "rust.svg"
     },
 ]
