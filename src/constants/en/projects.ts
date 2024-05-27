@@ -15,12 +15,22 @@ export const projects: Project[] = [
         liveUrl: "https://create.misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
+    /*
     {
         name: "dorg",
         description: "Experimental CLI tool that allows you to quickly organize files in a folder, creating folders and moving files so they are sorted by their creation date.",
         technologies: ["Rust"],
         image: "/dorg.webp",
         repoUrl: "https://github.com/MiguelHigueraDev/dorg"
+    },
+    */
+    {
+        name: "Discord Card React",
+        description: "React component that renders a Discord-style card. It can sync with your real Discord status, showing the games you play or the music you are listening to. Modular and customizable.",
+        technologies: ["React", "TypeScript", "CSS", "HTML"],
+        image: "/discord-card.webp",
+        liveUrl: "https://discord.miguelhiguera.dev/",
+        repoUrl: "https://github.com/MiguelHigueraDev/discord-card-react"
     },
     {
         name: "raccoonBot",

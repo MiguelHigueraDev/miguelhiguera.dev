@@ -17,7 +17,7 @@ const { name, description, technologies, liveUrl, repoUrl, image } =
 <li
   class="text-gray-300 border-2 p-4 border-neutral-700 rounded-xl flex flex-col justify-between"
 >
-  <div>
+  <div class="flex-grow">
     {
       liveUrl || repoUrl ? (
         <>
@@ -76,15 +76,14 @@ const { name, description, technologies, liveUrl, repoUrl, image } =
       }
     </div>
     <p class="mt-0.5">{description}</p>
-    <ul class="flex gap-3 flex-wrap self-end mt-3 flex-grow"></ul>
-    <ul class="flex flex-wrap gap-3">
-      {
-        technologies.map((tech: string) => (
-          <li class="px-3 select-none py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-50 ease-in-out rounded-xl font-mono">
-            {tech}
-          </li>
-        ))
-      }
-    </ul>
   </div>
+  <ul class="flex flex-wrap gap-3 mt-3">
+    {
+      technologies.map((tech: string) => (
+        <li class="px-3 select-none py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-50 ease-in-out rounded-xl font-mono">
+          {tech}
+        </li>
+      ))
+    }
+  </ul>
 </li>
