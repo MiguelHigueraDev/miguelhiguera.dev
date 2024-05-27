@@ -9,9 +9,11 @@ interface Props {
     emailMeAt: string,
     photoAlt: string,
     email: string,
+    resumeUrl: string,
+    viewResumeText: string,
 }
 
-const { hiIAm, jobTitle, tagline, visitMy, emailMeAt, photoAlt, email } = Astro.props;
+const { hiIAm, jobTitle, tagline, visitMy, emailMeAt, photoAlt, email, resumeUrl, viewResumeText } = Astro.props;
 ---
 
 <section class="mt-[70px] md:mt-0 flex flex-col md:flex-row items-center justify-between h-[600px] md:h-[400px] max-w-[900px] mx-auto">
@@ -21,6 +23,7 @@ const { hiIAm, jobTitle, tagline, visitMy, emailMeAt, photoAlt, email } = Astro.
         <p class="text-xl font-bold text-neutral-300 mt-1">{jobTitle}</p>
         <p class="text-lg text-gray-300 max-w-[300px] md:max-w-[900px]">{tagline}</p>
         <div class="mt-2 flex gap-3 mb-3">
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" class="lighten" aria-label={viewResumeText}><img src="/pdf.svg" class="inline w-6 h-6" alt="" /></a>
             <a href="https://www.linkedin.com/in/miguelhigueradev/" target="_blank" rel="noopener noreferrer" class="lighten" aria-label=`${visitMy} LinkedIn`><img src="/linkedin.svg" class="inline w-6 h-6" alt="" /></a>
             <a href="https://github.com/miguelhigueradev" target="_blank" rel="noopener noreferrer" class="lighten" aria-label=`${visitMy} GitHub`><img src="/github-purple.svg" class="inline w-6 h-6" alt="" /></a>
             <a href="mailto:contacto@miguelhiguera.dev" target="_blank" rel="noopener noreferrer" class="lighten" aria-label=`${emailMeAt}`><img src="/email.svg" class="inline w-6 h-6" alt="" /></a>
