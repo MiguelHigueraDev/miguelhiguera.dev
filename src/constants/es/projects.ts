@@ -9,21 +9,18 @@ export const projects: Project[] = [
     },
     {
         name: "Acortador de URL",
-        description: "Acortador de URLs simple. Utiliza Spring Boot y Angular, separando el backend del frontend. Los enlaces se almacenan en una base de datos Postgres. Alojado en un contenedor Docker.",
+        description: "Acortador de URLs. Utiliza Spring Boot y Angular, separando el backend del frontend. Los enlaces se almacenan en una base de datos Postgres. Alojado en un contenedor Docker.",
         technologies: ["Spring Boot", "Java", "Angular", "TypeScript", "Docker"],
         image: "/shortener.webp",
-        liveUrl: "https://create.misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
-    /*
     {
         name: "dorg",
-        description: "Herramienta CLI experimental que permite organizar rápidamente archivos en una carpeta, creando carpetas y moviendo archivos para que estén ordenados por su fecha de creación.",
+        description: "Herramienta CLI que permite organizar rápidamente archivos en una carpeta, creando carpetas y moviendo archivos para que estén ordenados por su fecha de creación. Aprendí Rust solo para hacer esto.",
         technologies: ["Rust"],
         image: "/dorg.webp",
         repoUrl: "https://github.com/MiguelHigueraDev/dorg"
     },
-    */
     {
         name: "Discord Card React",
         description: "Componente React que renderiza una tarjeta de perfil de Discord. Puede sincronizarse con tu estado real de Discord, mostrando los juegos que juegas o la música que estás escuchando. Modular y personalizable.",
@@ -31,14 +28,6 @@ export const projects: Project[] = [
         image: "/discord-card.webp",
         liveUrl: "https://discord.miguelhiguera.dev/",
         repoUrl: "https://github.com/MiguelHigueraDev/discord-card-react"
-    },
-    {
-        name: "raccoonBot",
-        description: "Bot de Discord multifunción y extensible que aumenta las interacciones en tu servidor, proporcionando varias utilidades como juegos, recordatorio de cumpleaños, encuestas, entre otras. Utilizado en más de 10 servidores.",
-        technologies: ["TypeScript", "Node.js"],
-        image: "/raccoonbot.webp",
-        liveUrl:"https://raccoonbot.vercel.app",
-        repoUrl: "https://github.com/MiguelHigueraDev/raccoonbot-ts"
     },
     {
         name: "MoodList",

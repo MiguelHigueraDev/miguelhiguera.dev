@@ -9,21 +9,18 @@ export const projects: Project[] = [
     },
     {
         name: "URL Shortener",
-        description: "Simple URL shortener. Uses Spring Boot and Angular, providing a separation between backend and frontend. Links are stored in a Postgres database. Hosted in a Docker container.",
+        description: "URL shortener. Uses Spring Boot and Angular, providing a separation between backend and frontend. Links are stored in a Postgres database. Hosted in a Docker container.",
         technologies: ["Spring Boot", "Java", "Angular", "TypeScript", "Docker"],
         image: "/shortener.webp",
-        liveUrl: "https://create.misft.me",
         repoUrl: "https://github.com/MiguelHigueraDev/url-shortener"
     },
-    /*
     {
         name: "dorg",
-        description: "Experimental CLI tool that allows you to quickly organize files in a folder, creating folders and moving files so they are sorted by their creation date.",
+        description: "CLI tool that allows you to quickly organize files in a folder, creating folders and moving files so they are sorted by their creation date. Learned Rust just to make this.",
         technologies: ["Rust"],
         image: "/dorg.webp",
         repoUrl: "https://github.com/MiguelHigueraDev/dorg"
     },
-    */
     {
         name: "Discord Card React",
         description: "React component that renders a Discord-style card. It can sync with your real Discord status, showing the games you play or the music you are listening to. Modular and customizable.",
@@ -31,14 +28,6 @@ export const projects: Project[] = [
         image: "/discord-card.webp",
         liveUrl: "https://discord.miguelhiguera.dev/",
         repoUrl: "https://github.com/MiguelHigueraDev/discord-card-react"
-    },
-    {
-        name: "raccoonBot",
-        description: "Multi-purpose and extensible Discord bot that increases interactions on your server, providing various utilities such as games, birthday reminders, polls, among others. Used in more than 10 servers.",
-        technologies: ["TypeScript", "Node.js"],
-        image: "/raccoonbot.webp",
-        liveUrl:"https://raccoonbot.vercel.app",
-        repoUrl: "https://github.com/MiguelHigueraDev/raccoonbot-ts"
     },
     {
         name: "MoodList",
