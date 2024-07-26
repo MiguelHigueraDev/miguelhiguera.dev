@@ -9,10 +9,21 @@ import TechStackSection from "../components/TechStackSection.astro";
 import Footer from "../components/Footer.astro";
 import { experiences } from "../constants/es/experience";
 import { projects } from "../constants/es/projects";
+import Alert from "../components/Alert.astro";
 ---
 
 <Layout title="Miguel Higuera." lang="es">
-  <Header experience="Experiencia" projects="Proyectos" aboutMe="Sobre mí" otherLanguage="English" otherLanguageUrl="/en" countryCode="us"/>
+  <Alert
+    text="Este es mi sitio antiguo y abandonado. Por favor visita el nuevo haciendo clic aquí."
+  />
+  <Header
+    experience="Experiencia"
+    projects="Proyectos"
+    aboutMe="Sobre mí"
+    otherLanguage="English"
+    otherLanguageUrl="/en"
+    countryCode="us"
+  />
   <main>
     <Hero
       hiIAm="Hola, soy"

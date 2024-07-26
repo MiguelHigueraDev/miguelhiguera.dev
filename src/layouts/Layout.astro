@@ -1,88 +1,113 @@
 ---
-import '@fontsource-variable/epilogue'
-import 'react-tooltip/dist/react-tooltip.css'
+import "@fontsource-variable/epilogue";
+import "react-tooltip/dist/react-tooltip.css";
 interface Props {
-    title: string;
-	lang: string;
+  title: string;
+  lang: string;
 }
 
 const { title, lang } = Astro.props;
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang={lang}>
-    <head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más." />
-		<meta name="keywords" content="desarrollo, web, ingeniero, informática, programador, javascript" />
-		<meta name="og:image" content="https://miguelhiguera.dev/miguelhigueradev.webp" />
-		<meta name="twitter:image" content="https://miguelhiguera.dev/miguelhigueradev.webp" />
-		<meta name="og:title" content="Miguel Higuera - Portafolio" />
-		<meta name="twitter:title" content="Miguel Higuera - Portafolio" />
-		<meta name="og:description" content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más." />
-		<meta name="twitter:description" content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más." />
-		<meta name="og:url" content="https://miguelhiguera.dev" />
-		<meta name="og:type" content="website" />
-		<meta name="og:site_name" content="Miguel Higuera - Portafolio" />
-		<meta name="og:locale" content="es_CL" />
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="theme-color" content="#9333ea" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-    </head>
-    <body class="p-4 max-w-[1200px] mx-auto bg-neutral-900">
-        <slot />
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo, web, ingeniero, informática, programador, javascript"
+    />
+    <meta
+      name="og:image"
+      content="https://miguelhiguera.dev/miguelhigueradev.webp"
+    />
+    <meta
+      name="twitter:image"
+      content="https://miguelhiguera.dev/miguelhigueradev.webp"
+    />
+    <meta name="og:title" content="Miguel Higuera - Portafolio" />
+    <meta name="twitter:title" content="Miguel Higuera - Portafolio" />
+    <meta
+      name="og:description"
+      content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más."
+    />
+    <meta
+      name="twitter:description"
+      content="Portafolio del desarrollador Miguel Higuera. Proyectos, experiencia, tecnologías usadas y más."
+    />
+    <meta name="og:url" content="https://miguelhiguera.dev" />
+    <meta name="og:type" content="website" />
+    <meta name="og:site_name" content="Miguel Higuera - Portafolio" />
+    <meta name="og:locale" content="es_CL" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#9333ea" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="p-4 max-w-[1200px] mx-auto bg-neutral-900">
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-	html {
-		font-family: "Epilogue Variable", ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji" !important;
-	}
+  html {
+    font-family:
+      "Epilogue Variable",
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      Segoe UI Symbol,
+      "Noto Color Emoji" !important;
+  }
 
-	::selection {
-		color: black;
-		background: rgb(166, 51, 254);
-	}
-	::-moz-selection {
-		color: black;
-		background: rgb(166, 51, 254);
-	}
+  ::selection {
+    color: black;
+    background: rgb(166, 51, 254);
+  }
+  ::-moz-selection {
+    color: black;
+    background: rgb(166, 51, 254);
+  }
 
-	/* ===== Scrollbar CSS ===== */
-	/* Firefox */
-	* {
-		scrollbar-width: auto;
-		scrollbar-color: #9333ea #1f1f1f;
-		scroll-behavior: smooth;
-	}
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #9333ea #1f1f1f;
+    scroll-behavior: smooth;
+  }
 
-	/* Chrome, Edge, and Safari */
-	*::-webkit-scrollbar {
-		width: 16px;
-	}
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
 
-	*::-webkit-scrollbar-track {
-		background: #1f1f1f;
-	}
+  *::-webkit-scrollbar-track {
+    background: #1f1f1f;
+  }
 
-	*::-webkit-scrollbar-thumb {
-		background-color: #9333ea;
-		border-radius: 10px;
-		border: 3px solid #ffffff;
-	}
+  *::-webkit-scrollbar-thumb {
+    background-color: #9333ea;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 
-	.lighten:hover {
-		filter: brightness(1.3);
-	}
-
+  .lighten:hover {
+    filter: brightness(1.3);
+  }
 </style>
